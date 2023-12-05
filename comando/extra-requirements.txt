@@ -1,0 +1,19 @@
+# This file is part of the COMANDO project which is released under the MIT
+# license. See file LICENSE for full license details.
+#
+# AUTHOR: Marco Langiu
+
+# additional requirements and features that use them
+# package: feature1, feature2, ...
+
+symengine: cpp-backend
+scipy: linearization
+scikit-learn: linearization
+matplotlib: visualization
+pyomo>=6: pyomo, test
+pytest: dev, test
+pytest-cov: dev, test
+sphinx: dev
+pypandoc: dev
+sphinx_rtd_theme: dev
+sphinx-math-dollar: dev
