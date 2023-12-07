@@ -1,9 +1,0 @@
-Beginning Node,Ending Node,Length [m],Depend,cost
-SimpleDistrict_2_3_5_6,a,48,ac,13844.76
-SimpleDistrict_10_11_15_16,i,48,c,13844.76
-SimpleDistrict_1_4_7_8,e,48,eg,13844.76
-SimpleDistrict_9_12_13_14,i,48,g,13844.76
-a,c,48,c,14489.0304
-c,i,60,,19236
-e,g,48,g,14489.0304
-g,i,60,,19236
