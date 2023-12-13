@@ -140,6 +140,8 @@ def dispatcher(design):
     P_elec = np.array([pyo.value(m.P_elec[i]) for i in m.iIDX])
     P_grid = np.array([pyo.value(m.P_grid[i]) for i in m.iIDX])
     P_PV = np.array([pyo.value(m.P_PV[i]) for i in m.iIDX])
+    P_PV_to_elec = np.array([pyo.value(m.P_PV_to_elec[i]) for i in m.iIDX])
+    P_curt = np.array([pyo.value(m.P_curt[i]) for i in m.iIDX])
     el_price = np.array([pyo.value(m.el_price[i]) for i in m.iIDX])
     m_elec = np.array([pyo.value(m.m_elec[i]) for i in m.iIDX])
 
@@ -149,12 +151,14 @@ def dispatcher(design):
             "P_elec": P_elec,
             "P_grid": P_grid,
             "P_PV": P_PV,
+            "P_PV_to_elec": P_PV_to_elec,
+            "P_curt": P_curt,
             "el_price": el_price,
             "m_elec": m_elec,
         }
     )
 
-    return data_time
+    return data_time, m
 
 
 # %% READING input data
@@ -212,7 +216,7 @@ design = {
 
 # %% I run the simulation
 
-data_time = dispatcher(design)
+data_time, m = dispatcher(design)
 
 # %%
 day_start_display = 0  # which day of the year do you want to start? cardinal number
